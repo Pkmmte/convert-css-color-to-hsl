@@ -1,10 +1,8 @@
 import * as fs from "fs";
-import internal = require("stream");
 import * as vscode from "vscode";
 import { ColorNames } from "./enumColors";
 const color = require("color-convertor");
 
-//const workspace = vscode.workspace.workspaceFolders[0].uri.fsPath;
 let status: boolean = false;
 let fsEvent: vscode.Disposable;
 
@@ -57,7 +55,6 @@ export const parserCSS = (file: vscode.Uri) => {
     });
   }
 
-  console.log(parsedColorNames[0]);
   parsedHex.map((el) => {
     let b = color.hexToHsl(el[0]);
     n = n.replace(el[0], b);
