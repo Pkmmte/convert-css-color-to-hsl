@@ -35,7 +35,7 @@ export const parserCSS = (file: vscode.Uri) => {
   const data = fs.readFileSync(file.fsPath, { encoding: "utf-8", flag: "r" });
   let n = data.toString();
 
-  const regexHex = /(?:#|0x)(?:[a-f0-9]{3}|[a-f0-9]{6})\b/g;
+  const regexHex = /(?:#)(?:[a-fA-F0-9]{3}|[a-fA-F0-9]{6})\b/g;
   const regexRgba = /(?:rgb)(?:[a-f0-9]{3}|[a-f0-9]{6})\b|(?:rgb)a?\([^\)]*\)/g;
   const regexName = /(\:(.+[a-zA-Z]))/g;
 
