@@ -1,6 +1,6 @@
 # Simple color to hsl extension
 
-Converts Color Names, Rgb, and Hex to HSL / HSLA.
+Converts Color Names, RGB, and HEX to HSL.
 
 ## Dependencies :
 
