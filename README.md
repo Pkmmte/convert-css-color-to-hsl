@@ -1,2 +1,7 @@
-# convert-css-color-to-hsl
-Converts RGB/A Color Names and HEX colors to HSL/HSLA
+# Simple color to hsl extension
+
+Converts Color Names, Rgb, and Hex to HSL / HSLA.
+
+## Dependencies :
+
+This extension relies on **vakhariaheet's** https://github.com/vakhariaheet/color-convertor
