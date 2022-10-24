@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as vscode from "vscode";
 import { ColorNames } from "./enumColors";
-const color = require("color-convertor");
+import color = require("color-convertor");
 
 let status: boolean = false;
 let fsEvent: vscode.Disposable;
@@ -65,7 +65,7 @@ export const parserCSS = (file: vscode.Uri) => {
     const sp = p.split(",").map(Number);
     let b =
       sp.length >= 4
-        ? color.rgbToHsl(sp[0], sp[1], sp[2], `.${sp[3]}`)
+        ? color.rgbToHsl(sp[0], sp[1], sp[2], sp[3])
         : color.rgbToHsl(sp[0], sp[1], sp[2]);
 
     n = n.replace(el[0], b);

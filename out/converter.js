@@ -5,7 +5,6 @@ const fs = require("fs");
 const vscode = require("vscode");
 const enumColors_1 = require("./enumColors");
 const color = require("color-convertor");
-//const workspace = vscode.workspace.workspaceFolders[0].uri.fsPath;
 let status = false;
 let fsEvent;
 const startCompile = () => {
@@ -53,7 +52,6 @@ const parserCSS = (file) => {
             }
         });
     }
-    console.log(parsedColorNames[0]);
     parsedHex.map((el) => {
         let b = color.hexToHsl(el[0]);
         n = n.replace(el[0], b);
@@ -62,7 +60,7 @@ const parserCSS = (file) => {
         let p = el[0].replace(/[^0-9\,]/g, "");
         const sp = p.split(",").map(Number);
         let b = sp.length >= 4
-            ? color.rgbToHsl(sp[0], sp[1], sp[2], `.${sp[3]}`)
+            ? color.rgbToHsl(sp[0], sp[1], sp[2], sp[3])
             : color.rgbToHsl(sp[0], sp[1], sp[2]);
         n = n.replace(el[0], b);
     });
