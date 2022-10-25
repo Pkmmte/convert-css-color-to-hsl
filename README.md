@@ -2,6 +2,6 @@
 
 Converts Color Names, RGB, and HEX to HSL.
 
-## Dependencies :
+## Dependencies:
 
 This extension relies on **vakhariaheet's** https://github.com/vakhariaheet/color-convertor
